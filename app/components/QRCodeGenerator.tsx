@@ -2,22 +2,12 @@
 
 import {useState, useRef} from 'react';
 import QRCode from 'qrcode';
+import Image from 'next/image';
 import {BorderBeam} from "@/components/ui/border-beam";
 import {MagicCard} from "@/components/ui/magic-card";
 import {Button} from "@/components/ui/button";
 import TargetCursor from "@/components/TargetCursor";
-import {
-    Card,
-    CardAction,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
 import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {useTheme} from "next-themes";
 
 
 type QRFormat = 'png' | 'svg';
@@ -37,7 +27,6 @@ const sizeConfigs: Record<QRSize, SizeConfig> = {
 };
 
 export default function QRCodeGenerator() {
-    const {theme} = useTheme();
     const [url, setUrl] = useState<string>('');
     const [qrData, setQrData] = useState<string | null>(null);
     const [isGenerating, setIsGenerating] = useState<boolean>(false);
@@ -175,10 +164,12 @@ export default function QRCodeGenerator() {
                                 <div className="flex-shrink-0 flex flex-col items-center lg:items-start">
                                     <h3 className="text-lg font-medium text-foreground mb-4">Preview</h3>
                                     <div className="p-6 bg-background border border-border rounded-lg dark:bg-gray-100 cursor-target">
-                                        <img
+                                        <Image
                                             src={qrData}
                                             alt="Generated QR Code"
-                                            className="w-32 h-32 "
+                                            width={128}
+                                            height={128}
+                                            className="w-32 h-32"
                                         />
                                     </div>
                                 </div>
