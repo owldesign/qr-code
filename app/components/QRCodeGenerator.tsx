@@ -8,6 +8,7 @@ import {MagicCard} from "@/components/ui/magic-card";
 import {Button} from "@/components/ui/button";
 import TargetCursor from "@/components/TargetCursor";
 import {Input} from "@/components/ui/input";
+import {sendGAEvent} from "@next/third-parties/google";
 
 
 type QRFormat = 'png' | 'svg';
@@ -49,6 +50,7 @@ export default function QRCodeGenerator() {
 
             const qrString = await QRCode.toDataURL(url.trim(), qrOptions);
             setQrData(qrString);
+            sendGAEvent('event', 'buttonClicked', { value: 'generate_qr_code' });
         } catch (error) {
             console.error('Error generating QR code:', error);
         } finally {
@@ -96,7 +98,13 @@ export default function QRCodeGenerator() {
 
             if (format === 'svg') {
                 URL.revokeObjectURL(dataUrl);
+                sendGAEvent('event', 'buttonClicked', { value: 'download_svg_size_' + size });
             }
+
+            if (format === 'png') {
+                sendGAEvent('event', 'buttonClicked', { value: 'download_png_size_' + size });
+            }
+
         } catch (error) {
             console.error('Error downloading QR code:', error);
         }
