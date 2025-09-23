@@ -58,13 +58,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://your-domain.com',
+    url: 'https://qr.owl-design.net',
     siteName: 'Free QR Code Generator',
     title: 'Free QR Code Generator - Create QR Codes Online Instantly',
     description: 'Create professional QR codes for free. Download in PNG or SVG format. Fast, secure, and mobile-friendly QR code generator tool.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/screenshot.jpg',
         width: 1200,
         height: 630,
         alt: 'Free QR Code Generator Tool',
@@ -75,16 +75,16 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free QR Code Generator - Create QR Codes Online',
     description: 'Create professional QR codes for free. Download in PNG or SVG format. No registration required.',
-    images: ['/og-image.jpg'],
-    creator: '@yourhandle',
+    images: ['/screenshot.jpg'],
+    creator: '@owldesign',
   },
   alternates: {
-    canonical: 'https://your-domain.com',
+    canonical: 'https://qr.owl-design.net',
   },
   category: 'Technology',
   classification: 'Free Online Tools',
   other: {
-    'google-site-verification': 'your-google-verification-code',
+    'google-site-verification': 'JOsTF47BSG5J-DcRuK47MWC8N-n19ragZefgANeepg4',
   },
 };
 
@@ -105,7 +105,7 @@ export default function RootLayout({
               "@type": "WebApplication",
               "name": "Free QR Code Generator",
               "description": "Free online QR code generator. Create professional QR codes instantly for websites, URLs, and links. Download in PNG or SVG format.",
-              "url": "https://your-domain.com",
+              "url": "https://qr.owl-design.net",
               "applicationCategory": "UtilitiesApplication",
               "operatingSystem": "Any",
               "permissions": "browser",
@@ -125,7 +125,7 @@ export default function RootLayout({
                 "No registration required",
                 "Instant download"
               ],
-              "screenshot": "https://your-domain.com/screenshot.jpg",
+              "screenshot": "https://qr.owl-design.net/screenshot.jpg",
               "softwareVersion": "1.0",
               "author": {
                 "@type": "Organization",
@@ -143,10 +143,10 @@ export default function RootLayout({
             })
           }}
         />
-        <link rel="canonical" href="https://your-domain.com" />
-        <meta name="google-site-verification" content="your-google-verification-code" />
-        <meta name="msvalidate.01" content="your-bing-verification-code" />
-        <meta name="yandex-verification" content="your-yandex-verification-code" />
+        <link rel="canonical" href="https://qr.owl-design.net" />
+        <meta name="google-site-verification" content="JOsTF47BSG5J-DcRuK47MWC8N-n19ragZefgANeepg4" />
+        <meta name="msvalidate.01" content="32935B8FCB0501577B96E9C8DB5B8E2D" />
+        <meta name="yandex-verification" content="a165d869f43757e1" />
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="light dark" />
         <link rel="icon" href="/favicon.ico" />
