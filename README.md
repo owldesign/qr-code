@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QR Code Generator
+
+A modern, responsive QR code generator built with Next.js 15, React 19, and TypeScript. Create professional QR codes instantly with support for multiple formats and sizes, featuring a beautiful dark/light theme system.
+
+## Features
+
+- 🎨 **Modern UI** - Built with shadcn/ui components and Tailwind CSS v4
+- 🌙 **Dark/Light Theme** - Automatic system detection with manual toggle
+- 📱 **Responsive Design** - Works perfectly on desktop and mobile
+- 🔗 **URL Validation** - Real-time validation with smooth animations
+- 📥 **Multiple Formats** - Download as PNG (with transparency) or SVG
+- 📐 **Various Sizes** - Small (300px), Medium (600px), Large (1200px), Huge (3000px)
+- ⚡ **Fast Development** - Powered by Turbopack for lightning-fast builds
+- 🎭 **Animated Components** - Smooth transitions and engaging animations
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **UI Library**: React 19 + TypeScript
+- **Styling**: Tailwind CSS v4 with PostCSS
+- **Components**: shadcn/ui
+- **QR Generation**: qrcode library
+- **Theme System**: next-themes
+- **Fonts**: Geist Sans & Geist Mono
+- **Build Tool**: Turbopack
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd qr-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Development Commands
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Start development server (with Turbopack)
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build for production
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start production server
+npm run start
 
-## Deploy on Vercel
+# Run ESLint
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Enter URL**: Type any valid URL in the input field
+2. **Generate**: The "Generate QR Code" button appears with animation when a valid URL is entered
+3. **Preview**: View the generated QR code in the preview section
+4. **Choose Format**: Select between PNG (with transparency) or SVG format
+5. **Download**: Choose your preferred size and download instantly
+
+## Project Structure
+
+```
+app/
+├── components/
+│   └── QRCodeGenerator.tsx    # Main QR generator component
+├── layout.tsx                 # Root layout with theme provider
+├── page.tsx                   # Home page
+└── globals.css               # Global styles and theme variables
+
+components/
+├── ui/                       # shadcn/ui components
+├── theme-provider.tsx        # Theme context provider
+└── theme-toggle.tsx          # Theme toggle button
+
+lib/
+└── utils.ts                  # Utility functions
+```
+
+## Theme System
+
+The application supports both light and dark themes with:
+- Automatic system preference detection
+- Manual toggle via the sun/moon icon (top-right corner)
+- Smooth transitions between themes
+- Persistent theme selection
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
