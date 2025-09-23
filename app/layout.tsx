@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { GoogleTagManager } from '@next/third-parties/google';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,6 +96,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <GoogleTagManager gtmId="G-RJFK0YTGFY" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
