@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         description: 'Create professional QR codes for free. Download in PNG or SVG format. Fast, secure, and mobile-friendly QR code generator tool.',
         images: [
             {
-                url: '/screenshot.jpg',
+                url: 'https://qr.owl-design.net/screenshot.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Free QR Code Generator Tool',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Free QR Code Generator - Create QR Codes Online',
         description: 'Create professional QR codes for free. Download in PNG or SVG format. No registration required.',
-        images: ['/screenshot.jpg'],
+        images: ['https://qr.owl-design.net/screenshot.jpg'],
         creator: '@owldesign',
     },
     alternates: {
